@@ -2,7 +2,7 @@ const SpotifyAPI = {
   clientId: "44e2ccf9b3044723acbbd36fc87e06c7",
   redirectUri: window.location.href.includes("localhost")
     ? "http://localhost:5173/callback"
-    : "https://deployed-site.com/callback",
+    : "https://jammingyo.netlify.app/callback",
   accessToken: null,
   expiresIn: null,
 
@@ -82,7 +82,6 @@ const SpotifyAPI = {
 
       if (!response.ok) {
         if (response.status === 401) {
-
           this.logout();
           return null;
         }
